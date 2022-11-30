@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="ConexionesDeRedTemplate/src"/>
+	<classpathentry kind="src" path="ConexionesDeRedTemplate/tests"/>
+	<classpathentry kind="lib" path="ConexionesDeRedTemplate/lib/hamcrest-2.2.jar"/>
+	<classpathentry kind="lib" path="ConexionesDeRedTemplate/lib/junit-addons-1.4.jar"/>
+	<classpathentry kind="output" path="ConexionesDeRedTemplate/bin"/>
+</classpath>

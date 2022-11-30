@@ -1,0 +1,8 @@
+package paquete;
+
+public class Feline {
+	private String type = "f ";
+	public Feline() {
+		System.out.print("feline ");
+	}
+}

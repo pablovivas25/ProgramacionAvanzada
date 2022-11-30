@@ -1,0 +1,8 @@
+
+public class Resolucion {
+	public static void main(String[] args) {
+		Almacenamiento almacenamiento=GestorFile.leer("src/PreparacionPruebas/LotePrueba/Entrada/01_Enunciado.in");
+		
+		System.out.println(almacenamiento.getCantidadAplicaciones());
+	}
+}

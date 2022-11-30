@@ -1,0 +1,19 @@
+import java.util.List;
+
+public class Carrera {
+	private List<Rango> rango_femenino;
+	private List<Rango> rango_masculino;
+	private List<Competidor> competidores;
+	private List<Integer> orden_llegada;
+	public Carrera(List<Rango> rango_femenino, List<Rango> rango_masculino, List<Competidor> competidores,
+			List<Integer> orden_llegada) {
+		super();
+		this.rango_femenino = rango_femenino;
+		this.rango_masculino = rango_masculino;
+		this.competidores = competidores;
+		this.orden_llegada = orden_llegada;
+	}
+	
+	
+	
+}

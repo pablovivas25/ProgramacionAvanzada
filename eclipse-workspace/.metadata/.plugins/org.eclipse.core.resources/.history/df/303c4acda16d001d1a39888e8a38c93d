@@ -1,0 +1,61 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+
+
+public class GestorFile {
+	
+	public static Envasadora leerArchivo(String path) {
+		try {
+			ArrayList<Secuencia> lista_sec=new ArrayList<Secuencia>();
+			
+			
+			Scanner sc=new Scanner(new File(path));
+			String cadena=sc.nextLine();
+			String cadena1="";
+			String []vec = cadena.split(" ");
+			
+			for(String g:vec)
+				cadena1+=g;
+	
+			String cad="";
+			for(int i=0;i<cadena1.length();i++) {
+			
+			
+				int posInicial=-1,posFinal=-1;
+				if(cadena1.charAt(i)=='G') {
+					posInicial=i;
+					
+					cad+=cadena1.charAt(i);
+					
+				}else {
+				    posFinal=i-1;
+				    if(cad.length()>0)
+					lista_sec.add(new Secuencia(cad,posInicial,posFinal));
+					cad="";
+					posInicial=-1;
+					posFinal=-1;
+					
+				}
+					
+			}
+			sc.close();
+			return new Envasadora(lista_sec);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+		
+	
+	}
+	public static void main(String[] args) {
+		Envasadora e=GestorFile.leerArchivo("./PreparacionPruebas/LotePrueba/Entrada/enunciado.in");
+		for(Secuencia s:e.getListaSec())
+			System.out.println(s.getSec().toString() + " "+s.getPosicion_inicial()+ " "+s.getPosicion_final());
+	}
+
+}

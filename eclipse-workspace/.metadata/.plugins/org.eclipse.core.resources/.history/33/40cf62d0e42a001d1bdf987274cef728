@@ -1,0 +1,6 @@
+
+public interface Archivo {
+	
+	public Torneo leerArchivo(String path_archivo);
+
+}

@@ -1,0 +1,67 @@
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeMap;
+import java.util.TreeSet;
+
+public class Continente {
+
+	private Map<String,Set<String>> pares;
+	private Set<Limitrofe> translimitrofes;
+	private ArrayList<Limitrofe> limita;
+
+	public Continente(Map<String,Set<String>> pares,ArrayList<Limitrofe> limita) {
+		this.pares = pares;
+		this.translimitrofes=new TreeSet<Limitrofe>();
+		this.limita=limita;
+	}
+
+
+
+	public Map<String,Set<String>>getPares() {
+		return pares;
+	}
+
+	
+	public void translimitrofes() {
+		Set<Limitrofe> trans=new HashSet<Limitrofe>();
+		ArrayList<Limitrofe> c1=(ArrayList<Limitrofe>) this.limita.clone();
+		
+		for(int i=0;i<c1.size();i++) {
+			for(int j=0;j<this.limita.size();j++) {
+				if(c1.get(i).getP2().equals(this.limita.get(j).getP1()) && i!=j)
+					trans.add(new Limitrofe(c1.get(i).getP1(),this.limita.get(j).getP2()))
+			}
+		}
+		
+		/*
+		
+		for(String clave:pares.keySet()) {
+	
+			for(String valor:this.pares.get(clave)) {
+			
+				for(int i=0;i<this.limita.size();i++) {
+					if(valor.equals(this.limita.get(i).getP1())) {
+						Limitrofe l=new Limitrofe(clave,this.limita.get(i).getP2());
+						Limitrofe l1=new Limitrofe(this.limita.get(i).getP2(),clave);
+						if(this.limita.contains(l)==false && this.limita.contains(l1)==false && clave.equals(this.limita.get(i).getP2())==false){
+							//System.out.println(clave + " "+this.limita.get(i).getP2());
+						
+							trans.add(l);
+						}
+							
+					}
+				}
+			}
+			
+		}
+		*/
+		
+		for(Limitrofe l:trans)
+			System.out.println(l.getP1()+ " "+l.getP2());
+	}
+}

@@ -1,0 +1,61 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class GestorFile {
+	
+	static Concurso leerArchivo(String path) {
+		Concurso c=null;
+		try {
+			
+			Scanner sc=new Scanner(new File(path));
+			ArrayList<Concursante> concursantes=new ArrayList<Concursante>();
+			int cantidad_participantes=sc.nextInt();
+			int cantidad_lanzamientos=3;
+			int cant_lanz=0;
+			Concursante curs=new Concursante();;
+			
+			for(int i=0;i<cantidad_participantes*cantidad_lanzamientos;i++) {
+			
+				if(cant_lanz<cantidad_lanzamientos) {
+					System.out.println("entre");
+					double distancia=sc.nextDouble();
+					double angulo=sc.nextDouble();
+					System.out.println(angulo + " "+distancia);
+					curs.agregarLanzamiento(new Lanzamiento(distancia,angulo));
+					System.out.println("rompe");
+					cant_lanz++;
+					System.out.println("cant_lazn "+cant_lanz);
+				}else {
+					System.out.println("entre1");
+					concursantes.add(curs);
+					cant_lanz=0;
+					curs=new Concursante();
+				}
+				
+				
+				
+			}
+			c=new Concurso(cantidad_participantes,cantidad_lanzamientos,concursantes);
+			sc.close();
+			return c;
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return c;
+		
+	}
+	public static void main(String[] args) {
+		
+		try {
+			Concurso c=GestorFile.leerArchivo("./PreparacionPrueba/LotePrueba/Entrada/01_enunciado.in");
+			System.out.println(c.getCantidad_concursantes());
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+	}
+}

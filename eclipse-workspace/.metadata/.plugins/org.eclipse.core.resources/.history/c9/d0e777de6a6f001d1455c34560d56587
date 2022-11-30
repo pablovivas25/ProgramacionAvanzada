@@ -1,0 +1,28 @@
+
+public class Limitrofe {
+	private String p1;
+	private String p2;
+
+	public Limitrofe(String p1, String p2) {
+		super();
+		this.p1 = p1;
+		this.p2 = p2;
+	}
+
+	public Pais limitaCon(Pais p) {
+		if (p.getNombre().equals(p1.getNombre()))
+			return p2;
+		if (p.getNombre().equals(p2.getNombre()))
+			return p1;
+		return null;
+	}
+
+	public Pais getP1() {
+		return p1;
+	}
+
+	public Pais getP2() {
+		return p2;
+	}
+
+}

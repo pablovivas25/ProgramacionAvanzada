@@ -1,0 +1,26 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class GestorFile {
+	public static Sopa leerArchivo(String path) {
+		try {
+			Scanner sc=new Scanner(new File(path));
+			ArrayList<String> oeste=new ArrayList<String>();
+			ArrayList<String> norte=new ArrayList<String>();
+			ArrayList<String> este=new ArrayList<String>();
+			ArrayList<String> sur=new ArrayList<String>();
+			ArrayList<String> palabras=new ArrayList<String>();
+			ArrayList<String> aux=new ArrayList<String>();
+			
+			
+			
+			sc.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+}

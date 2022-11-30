@@ -1,0 +1,19 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Torneo implements Archivo{
+	private int cantidad_participantes;
+	private List<Luchador> participantes;
+	
+	public Torneo(int cant_parti) {
+		this.cantidad_participantes=cant_parti;
+		this.participantes=new ArrayList<Luchador>();
+	}
+	
+	public void agregarParticipante(Luchador l) {
+		this.participantes.add(l);
+	}
+	
+	
+	
+}

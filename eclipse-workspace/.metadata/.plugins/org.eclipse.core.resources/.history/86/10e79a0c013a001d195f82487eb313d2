@@ -1,0 +1,8 @@
+
+public class Almacenamiento {
+	
+	private int cantidadAplicaciones;
+	private Aplicacion appInstalar;
+	private Celular celu;
+
+}

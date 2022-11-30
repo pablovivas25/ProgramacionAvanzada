@@ -1,0 +1,6 @@
+
+public class Competidor {
+	private int edad;
+	private String sexo;
+
+}

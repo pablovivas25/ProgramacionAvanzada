@@ -1,0 +1,34 @@
+
+public class Almacenamiento {
+	
+	private int cantidadAplicaciones;
+	private Aplicacion appInstalar;
+	private Celular celu;
+	
+	
+	public Almacenamiento(int cantidadAplicaciones, Aplicacion appInstalar, Celular celu) {
+		super();
+		this.cantidadAplicaciones = cantidadAplicaciones;
+		this.appInstalar = appInstalar;
+		this.celu = celu;
+	}
+
+
+	public int getCantidadAplicaciones() {
+		return cantidadAplicaciones;
+	}
+
+
+	public Aplicacion getAppInstalar() {
+		return appInstalar;
+	}
+
+
+	public Celular getCelu() {
+		return celu;
+	}
+	
+	
+	
+
+}

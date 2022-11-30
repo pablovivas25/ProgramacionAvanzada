@@ -1,0 +1,75 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class GestorFile {
+	
+	static Concurso leerArchivo(String path) {
+		Concurso c=null;
+		try {
+			
+			Scanner sc=new Scanner(new File(path));
+			ArrayList<Concursante> concursantes=new ArrayList<Concursante>();
+			int cantidad_participantes=sc.nextInt();
+			int cantidad_lanzamientos=3;
+			int cant_lanz=0;
+			Concursante curs=new Concursante();;
+			int j=0;
+			int i=0;
+			while(i<=cantidad_participantes*cantidad_lanzamientos) {
+			
+				if(cant_lanz<cantidad_lanzamientos) {
+					
+					double distancia=sc.nextDouble();
+					double angulo=sc.nextDouble();
+			
+					curs.agregarLanzamiento(new Lanzamiento(distancia,angulo));
+				
+					cant_lanz++;
+					i++;
+				
+				}else {
+				
+					concursantes.add(curs);
+					cant_lanz=0;
+					curs=new Concursante();
+					System.out.println(j++);
+				
+				
+				}
+				
+				
+				
+			}
+			c=new Concurso(cantidad_participantes,cantidad_lanzamientos,concursantes);
+			sc.close();
+			return c;
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return c;
+		
+	}
+	public static void main(String[] args) {
+		
+		try {
+			Concurso c=GestorFile.leerArchivo("./PreparacionPrueba/LotePrueba/Entrada/01_enunciado.in");
+			System.out.println(c.getCantidad_concursantes());
+			
+			for(Concursante cu: c.getConcursantes()) {
+				System.out.println("part");
+				for(Lanzamiento l:cu.getLanzamientos()) {
+					System.out.println(l.getDistancia()+ " "+l.getAngulo());
+				}
+			}
+			
+	
+		}catch(Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+	}
+}

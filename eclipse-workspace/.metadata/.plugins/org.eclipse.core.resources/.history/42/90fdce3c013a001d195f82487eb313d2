@@ -1,0 +1,28 @@
+
+public class GestorFile {
+	
+	public static Almacenamiento leer(String path) {
+		Almacenamiento almacenamiento = null ;
+		
+		File file = new File(path);
+		Scanner scanner;
+		try {
+			scanner = new Scanner(file);
+			scanner.useLocale(Locale.ENGLISH);
+
+			int cantAplicaciones = scanner.nextInt();
+			Aplicacion instalar=new Aplicacion(scanner.nextInt());
+			Celular c=new Celular();
+			
+			for(int i=0;i<cantAplicaciones;i++)
+				c.agregarAplicacion(new Aplicacion(scanner.nextInt()));
+			
+			almacenamiento=new Almacenamiento(c,instalar);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		return almacenamiento;
+	}
+
+}

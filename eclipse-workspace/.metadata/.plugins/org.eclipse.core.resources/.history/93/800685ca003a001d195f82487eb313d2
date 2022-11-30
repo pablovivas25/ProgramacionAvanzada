@@ -1,0 +1,9 @@
+
+public class Celular {
+	
+	private List<Aplicacion> aplicaciones;
+	
+	public Celular() {
+		
+	}
+}

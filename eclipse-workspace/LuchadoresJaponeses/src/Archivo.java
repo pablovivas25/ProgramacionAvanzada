@@ -1,0 +1,9 @@
+
+public interface Archivo {
+	
+	public Torneo leerArchivo(String path_archivo);
+	public void escribirArchivo(String path_archivo,int [] resultado);
+	
+	
+
+}

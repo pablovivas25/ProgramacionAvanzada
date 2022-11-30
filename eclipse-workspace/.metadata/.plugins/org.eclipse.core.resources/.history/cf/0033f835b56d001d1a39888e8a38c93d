@@ -1,0 +1,7 @@
+
+public class GestorFile {
+	
+	public static Imagen leerArchivo(String path) {
+		
+	}
+}

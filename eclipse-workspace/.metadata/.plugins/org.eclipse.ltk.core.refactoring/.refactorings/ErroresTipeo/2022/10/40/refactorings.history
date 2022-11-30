@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ErroresTipeo/PreparacionPrueba/LotePrueba/Entrada/04_Mayus_minusculas&apos; to &apos;04_Mayus_minusculas.in&apos;" description="Rename resource &apos;04_Mayus_minusculas&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="PreparacionPrueba/LotePrueba/Entrada/04_Mayus_minusculas" name="04_Mayus_minusculas.in" stamp="1664656294641" updateReferences="true"/>
+</session>

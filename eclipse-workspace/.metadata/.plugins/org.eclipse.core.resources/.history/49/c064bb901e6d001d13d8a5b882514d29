@@ -1,0 +1,41 @@
+import java.util.List;
+
+public class Carrera {
+	private List<Rango> listaRangos;
+	private List<Competidor> competidores;
+	private List<Integer> orden_llegada;
+	
+	public Carrera(List<Rango> listaRangos, List<Competidor> competidores, List<Integer> orden_llegada) {
+		super();
+		this.listaRangos = listaRangos;
+		this.competidores = competidores;
+		this.orden_llegada = orden_llegada;
+	}
+
+	public List<Rango> getListaRangos() {
+		return listaRangos;
+	}
+
+	public void setListaRangos(List<Rango> listaRangos) {
+		this.listaRangos = listaRangos;
+	}
+
+	public List<Competidor> getCompetidores() {
+		return competidores;
+	}
+
+	public void setCompetidores(List<Competidor> competidores) {
+		this.competidores = competidores;
+	}
+
+	public List<Integer> getOrden_llegada() {
+		return orden_llegada;
+	}
+
+	public void setOrden_llegada(List<Integer> orden_llegada) {
+		this.orden_llegada = orden_llegada;
+	}
+	
+	
+	
+}

@@ -1,0 +1,22 @@
+9 6
+1 6 14
+1 3 9
+6 3 2
+6 5 9
+1 2 7
+5 4 6
+3 4 11
+3 2 10
+2 4 15
+
+
+vs = 1,2,3,4,5 y 6
+s =
+verificado false false false false false false
+
+resolver
+nodoInicio =2 
+vs 1 2 3 4 5 6
+s 2
+verificado false true false false false false
+

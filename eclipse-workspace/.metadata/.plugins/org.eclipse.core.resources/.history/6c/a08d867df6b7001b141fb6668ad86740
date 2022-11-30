@@ -1,0 +1,54 @@
+package conflictoentrereinas;
+
+public class Reina {
+	private int numeroReina;
+	private int posX;
+	private int posY;
+
+	public Reina(int num, int posX, int posY) {
+		super();
+		this.numeroReina = num;
+		this.posX = posX;
+		this.posY = posY;
+	}
+
+	public int getNumeroReina() {
+		return numeroReina;
+	}
+
+	public int getPosX() {
+		return posX;
+	}
+
+	public int getPosY() {
+		return posY;
+	};
+
+	public int hayConflicto(Reina o) {
+
+		if (this.getPosX() == o.getPosX()) { // Horizontal
+			if (this.getPosY() < o.getPosY())
+				return 1;
+			else
+				return 2;
+		}
+		if (this.getPosY() == o.getPosY()) {// vertical
+			if (this.getPosX() < o.getPosY())
+				return 3;
+			else
+				return 4;
+		}
+
+		if (Math.abs(o.getPosX() - this.getPosX()) == Math.abs(o.getPosY() - this.getPosY())) {
+			if(o.getPosX()>this.getPosX() && o.getPosY()>this.getPosY()) // diagonal derecha inferior
+				return 5;
+			if(o.getPosX()<this.getPosY() && o.getPosY()>this.getPosY()) // diagonal superior derecha
+				return 6;
+			 if(o.getPosX()<this.getPosX() && o.getPosY()<this.getPosY())
+				 return 7;
+			 return 8;
+		}
+		return -1;// no tiene conflicto con esa reina
+
+	}
+}

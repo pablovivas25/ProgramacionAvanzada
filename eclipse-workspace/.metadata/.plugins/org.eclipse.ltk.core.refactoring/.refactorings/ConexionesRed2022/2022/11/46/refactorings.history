@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;ConexionesRed2022/PreparacionPruebas/LotePrueba/Entrada/05_conectar_fatiga.in&apos; to &apos;05_todas_preguntas.in&apos;" description="Rename resource &apos;05_conectar_fatiga.in&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="PreparacionPruebas/LotePrueba/Entrada/05_conectar_fatiga.in" name="05_todas_preguntas.in" stamp="1668124218320" updateReferences="true"/>
+</session>

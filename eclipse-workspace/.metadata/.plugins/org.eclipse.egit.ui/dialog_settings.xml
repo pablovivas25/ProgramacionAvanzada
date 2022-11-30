@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="EGit.KnownHosts">
+		<item value="git.eclipse.org"/>
+		<item value="github.com"/>
+		<item value="bitbucket.org"/>
+	</list>
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="https://github.com/LYSTP/KingDomino.git"/>
+		<item value="file://C:\Users\pablo\OneDrive\Escritorio\PrograAvanzada1C2021\version2\KingDomino-master"/>
+		<item value="file://C:\Users\pablo\OneDrive\Escritorio\PrograAvanzada1C2021\version2\KingDomino-master\KingDomino-master"/>
+	</list>
+</section>

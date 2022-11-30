@@ -1,0 +1,30 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class GestorFile {
+	
+	public static Almacenamiento leer(String path) {
+		Almacenamiento almacenamiento = null ;
+		
+		File file = new File(path);
+		Scanner scanner;
+		try {
+			scanner = new Scanner(file);
+			scanner.useLocale(Locale.ENGLISH);
+			
+			int cantidadAplicaciones=scanner.nextInt();
+			Aplicacion appInstalar=new Aplicacion(scanner.nextInt());
+			
+			
+
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		return almacenamiento;
+	}
+
+}

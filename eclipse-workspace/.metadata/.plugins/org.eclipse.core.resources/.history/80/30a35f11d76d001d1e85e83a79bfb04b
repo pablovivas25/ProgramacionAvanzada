@@ -1,0 +1,86 @@
+
+public class Imagen {
+	private String imagen_comprimida;
+	private String imagen_descomprimida;
+	
+	private String imagen_comprimida_out="";
+	private String imagen_descomprimida_out="";
+	
+	
+	public Imagen(String imagen_comprimida, String imagen_descomprimida) {
+		super();
+		this.imagen_comprimida = imagen_comprimida;
+		this.imagen_descomprimida = imagen_descomprimida;
+	}
+
+	public String getImagen_comprimida() {
+		return imagen_comprimida;
+	}
+
+	public void setImagen_comprimida(String imagen_comprimida) {
+		this.imagen_comprimida = imagen_comprimida;
+	}
+
+	public String getImagen_descomprimida() {
+		return imagen_descomprimida;
+	}
+
+	public void setImagen_descomprimida(String imagen_descomprimida) {
+		this.imagen_descomprimida = imagen_descomprimida;
+	}
+	
+	public void resolver() {
+		for(int i=0;i<this.imagen_comprimida.length();i++) {
+			if(this.imagen_comprimida.charAt(i)!='(' && this.imagen_comprimida.charAt(i)!=')') {
+				
+				if(Character.isDigit(this.imagen_comprimida.charAt(i))) {
+					int numero=Character.getNumericValue(this.imagen_comprimida.charAt(i));
+					
+				
+					String aux=""+this.imagen_comprimida.charAt(i-1);
+					String aux1=aux.repeat(numero-1);
+					this.imagen_descomprimida_out+=aux1;
+				}else
+					this.imagen_descomprimida_out+=this.imagen_comprimida.charAt(i);
+			}
+				
+		}
+		
+		String cad=""+this.imagen_descomprimida.charAt(0);
+		int cont=1;
+	
+		
+		for(int i=1;i<this.imagen_descomprimida.length();i++) {
+			if((""+this.imagen_descomprimida.charAt(i)).equals(cad)) {
+				cont++;
+			}else {
+				if(cont>4) {
+					this.imagen_comprimida_out+="(";
+					this.imagen_comprimida_out+=cad;
+					this.imagen_comprimida_out+=""+cont;
+					this.imagen_comprimida_out+=")";
+				}else {
+					this.imagen_comprimida_out+=this.imagen_descomprimida.charAt(i);
+				}
+					
+				
+				cad=""+this.imagen_descomprimida.charAt(i);
+				cont=1;
+			}
+		}
+		
+		if(cont>4) {
+			this.imagen_comprimida_out+="(";
+			this.imagen_comprimida_out+=cad;
+			this.imagen_comprimida_out+=""+cont;
+			this.imagen_comprimida_out+=")";
+
+		}else {
+			this.imagen_comprimida+=cad.repeat(cont);
+		}
+		
+		System.out.println(this.imagen_comprimida_out);
+		System.out.println(this.imagen_descomprimida_out);
+	}
+
+}

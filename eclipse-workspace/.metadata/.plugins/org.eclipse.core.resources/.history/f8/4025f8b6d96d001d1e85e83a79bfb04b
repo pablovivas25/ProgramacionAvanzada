@@ -1,0 +1,5 @@
+
+public class Sopa {
+	private List<String> norte;
+	private List<String> oeste;
+}

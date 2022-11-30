@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;mas_rango_masculino.in&apos; to &apos;Entrada&apos;" description="Move &apos;mas_rango_masculino.in&apos; to &apos;Entrada&apos;" destination="PreparacionPruebas/LotePrueba/Entrada" element1="PreparacionPruebas/LotePrueba/SalidaEsperada/mas_rango_masculino.in" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1669472345281" updateReferences="true"/>
+</session>

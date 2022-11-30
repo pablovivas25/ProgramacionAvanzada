@@ -1,0 +1,44 @@
+package conflictoentrereinas;
+
+public class Reina {
+	private int numeroReina;
+	private int posX;
+	private int posY;
+	
+	public Reina(int num,int posX, int posY) {
+		super();
+		this.numeroReina=num;
+		this.posX = posX;
+		this.posY = posY;
+	}
+	
+	  
+	public int getNumeroReina() {
+		return numeroReina;
+	}
+
+
+	public int getPosX() { 
+		return posX;
+	}
+
+	public int getPosY() {
+		return posY;
+	};
+	
+	public int hayConflicto(Reina o) {
+		if(this.getPosX()==o.getPosX()) { //Horizontal
+			if(this.getPosY()<o.getPosY())
+				return 1;
+			else
+				return 2;
+		}
+		if(this.getPosY()==o.getPosY()) {
+			if(this.getPosX()<o.getPosY())
+				return 3;
+			else
+				return 4;
+		}
+		
+	}
+}

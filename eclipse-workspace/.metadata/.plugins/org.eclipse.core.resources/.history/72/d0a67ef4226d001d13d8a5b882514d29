@@ -1,0 +1,36 @@
+import java.util.List;
+
+public class Rango {
+	private int edadMinima;
+	private int edadMaxima;
+	private List<Integer> podio;
+	
+	
+	public int getEdadMinima() {
+		return edadMinima;
+	}
+	public void setEdadMinima(int edadMinima) {
+		this.edadMinima = edadMinima;
+	}
+	public int getEdadMaxima() {
+		return edadMaxima;
+	}
+	public void setEdadMaxima(int edadMaxima) {
+		this.edadMaxima = edadMaxima;
+	}
+	public Rango(int edadMinima, int edadMaxima) {
+		super();
+		this.edadMinima = edadMinima;
+		this.edadMaxima = edadMaxima;
+	}
+	
+	boolean pertenceRango(int edad) {
+		return edad>=this.edadMinima && edad<=this.edadMaxima?true:false;
+		
+	}
+	
+	public void agregarPodio(Integer num) {
+		this.podio.add(num);
+	}
+	
+}

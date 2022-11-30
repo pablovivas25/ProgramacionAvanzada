@@ -1,0 +1,15 @@
+
+public class Secuencia {
+	private String sec;
+	private int posicion_inicial;
+	private int posicion_final;
+	
+	public Secuencia(String sec, int posicion_inicial, int posicion_final) {
+		super();
+		this.sec = sec;
+		this.posicion_inicial = posicion_inicial;
+		this.posicion_final = posicion_final;
+	}
+	
+	
+}

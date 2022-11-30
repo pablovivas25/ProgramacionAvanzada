@@ -1,0 +1,44 @@
+package clases;
+
+public  abstract class Entidad {
+	 protected  Ubicacion ubicacion;
+	 protected boolean visible;
+	 protected boolean traspasable;
+	 
+		
+	public Entidad(Ubicacion ubicacion,boolean vis,boolean tras) {
+		super();
+		this.ubicacion = ubicacion;
+		this.visible=vis;
+		this.traspasable=tras;
+	}
+
+	
+	public abstract void accion (Lolo lolo,Mapa mapa);
+	
+
+	@Override
+	public String toString() {
+		return " "+ubicacion +  "";
+	}
+
+
+
+
+
+	public boolean isTraspasable() {
+		return traspasable;
+	}
+
+
+	public void setTraspasable(boolean traspasable) {
+		this.traspasable = traspasable;
+	}
+	 
+    
+	 
+	 
+	 
+	 
+	 
+}

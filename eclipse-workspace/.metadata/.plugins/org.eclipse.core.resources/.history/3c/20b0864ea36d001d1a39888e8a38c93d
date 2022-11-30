@@ -1,0 +1,33 @@
+
+public class Secuencia implements Comparable<Secuencia>{
+	private String sec;
+	private int posicion_inicial;
+	private int posicion_final;
+	
+	public Secuencia(String sec, int posicion_inicial, int posicion_final) {
+		super();
+		this.sec = sec;
+		this.posicion_inicial = posicion_inicial;
+		this.posicion_final = posicion_final;
+	}
+
+	public String getSec() {
+		return sec;
+	}
+
+	public int getPosicion_inicial() {
+		return posicion_inicial;
+	}
+
+	public int getPosicion_final() {
+		return posicion_final;
+	}
+
+	@Override
+	public int compareTo(Secuencia o) {
+		return this.sec.length()-o.sec.length();
+	}
+	
+	
+	
+}

@@ -1,0 +1,51 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.Scanner;
+
+import unlam.progava.oia.Mesada;
+
+public class Torneo implements Archivo{
+	private int cantidad_participantes;
+	private List<Luchador> participantes;
+	
+	public Torneo(int cant_parti) {
+		this.cantidad_participantes=cant_parti;
+		this.participantes=new ArrayList<Luchador>();
+	}
+	
+	public void agregarParticipante(Luchador l) {
+		this.participantes.add(l);
+	}
+
+	@Override
+	public Torneo leerArchivo(String path_archivo) {
+		/File file = new File(path);
+		Scanner scanner;
+		try {
+			scanner = new Scanner(file);
+			scanner.useLocale(Locale.ENGLISH);
+
+			int cant = scanner.nextInt();
+			for (int i = 0; i < cant; i++) {
+				Mesada m=new Mesada(scanner.nextInt(),scanner.nextInt());
+				sumadora.agregar(m);
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+
+	@Override
+	public void escribirArchivo(String path_archivo, int[] resultado) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+	
+}

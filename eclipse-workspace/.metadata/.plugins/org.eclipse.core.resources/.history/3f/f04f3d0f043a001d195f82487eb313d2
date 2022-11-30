@@ -1,0 +1,44 @@
+
+public class Almacenamiento {
+	
+	private int cantidadAplicaciones;
+	private Aplicacion appInstalar;
+	private Celular celu;
+	private int cantidadAplicacionesABorrar;
+	
+	
+	public Almacenamiento(int cantidadAplicaciones, Aplicacion appInstalar, Celular celu) {
+		super();
+		this.cantidadAplicaciones = cantidadAplicaciones;
+		this.appInstalar = appInstalar;
+		this.celu = celu;
+		this.cantidadAplicacionesABorrar=0;
+	}
+	
+	public void setCantidadAplicacionesABorrar(int cantidadAplicacionesABorrar) {
+		this.cantidadAplicacionesABorrar = cantidadAplicacionesABorrar;
+	}
+
+	public int getCantidadAplicaciones() {
+		return cantidadAplicaciones;
+	}
+	
+	public void resolver() {
+		
+		
+	}
+
+
+	public Aplicacion getAppInstalar() {
+		return appInstalar;
+	}
+
+
+	public Celular getCelu() {
+		return celu;
+	}
+	
+	
+	
+
+}

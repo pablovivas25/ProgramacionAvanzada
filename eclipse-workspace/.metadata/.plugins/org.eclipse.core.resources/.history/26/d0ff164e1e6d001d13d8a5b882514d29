@@ -1,0 +1,34 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class GestorFile {
+	
+	public static Carrera leerArchivo(String path) {
+		try {
+			Scanner sc=new Scanner(new File(path));
+			List<Rango> rangos=new ArrayList<Rango>();
+			List<Competidor> competidores=new ArrayList<Competidor>();
+			List<Integer> orden=new ArrayList<Integer>();
+			
+			int comp=sc.nextInt();
+			int cant_rango_feminino=sc.nextInt();
+			int cant_rango_masculino=sc.nextInt();
+			int competidores_meta=sc.nextInt();
+			
+			for(int i=0;i<cant_rango_femenino;i++)
+				rangos.add(new Rango(sc.nextInt(),sc.next()));
+			
+				
+			
+			sc.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+	}
+
+}

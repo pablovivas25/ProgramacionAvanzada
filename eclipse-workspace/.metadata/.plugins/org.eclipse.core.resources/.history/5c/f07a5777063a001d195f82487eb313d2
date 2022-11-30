@@ -1,0 +1,7 @@
+
+public class Resolucion {
+	public static void main(String[] args) {
+		Almacenamiento almacenamiento=GestorFile.leer("./PreparacionPruebas/LotePrueba/Entrada/01_Enunciado.in");
+		GestorFile.escribir("./PreparacionPruebas/LotePrueba/SalidaEsperada/01_Enunciado.out",)
+	}
+}

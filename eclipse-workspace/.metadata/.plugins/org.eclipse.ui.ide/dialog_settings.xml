@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="SmartImportWizard">
+		<item key="SmartImportRootWizardPage.STORE_HIDE_ALREADY_OPEN" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_CLOSE_IMPORTED" value="false"/>
+		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
+		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
+		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\pablo\Downloads\AventurerosMateros\AventurerosMateros"/>
+			<item value="C:\Users\pablo\Downloads\MontanasComo\MontanasComo"/>
+			<item value="C:\Users\pablo\eclipse-workspace\AventurerosMaterosTemplate"/>
+			<item value="C:\Users\pablo\Downloads\Archivos\VagonesDeTrenDM"/>
+			<item value="C:\Users\pablo\Downloads\Archivos\VagonesDeTren"/>
+			<item value="C:\Users\pablo\eclipse-workspace\LetraExtrema"/>
+			<item value="C:\Users\pablo\eclipse-workspace\NombresRepetidos"/>
+			<item value="C:\Users\pablo\Downloads\Archivos\PaisesVecinos"/>
+			<item value="C:\Users\pablo\Downloads\EsGusano"/>
+			<item value="C:\Users\pablo\Downloads\ConexionesDeRed-master\ConexionesDeRed-master"/>
+			<item value="C:\Users\pablo\eclipse-workspace\Graphs"/>
+			<item value="C:\Users\pablo\Downloads\Invitados\Invitados"/>
+			<item value="C:\Users\pablo\OneDrive\Escritorio\PrograAvanzada1C2021\Juego-dinosaurio-de-google\JuegoDino"/>
+			<item value="C:\Users\pablo\Downloads\AguirreVivas\AguirreVivas"/>
+			<item value="C:\Users\pablo\Downloads\ClaseJavaFXLolo\ClaseJavaFXLolo"/>
+			<item value="C:\Users\pablo\eclipse-workspace\proyectoTCP\AdventureLolo"/>
+			<item value="C:\Users\pablo\OneDrive\Escritorio\proyectoTCP"/>
+			<item value="C:\Users\pablo\OneDrive\Escritorio\Adventures-Of-Lolo-2"/>
+			<item value="C:\Users\pablo\eclipse-workspace\Punto"/>
+			<item value="C:\Users\pablo\eclipse-workspace\InstalandoAplicaciones"/>
+			<item value="C:\Users\pablo\eclipse-workspace\InstalandoAps"/>
+			<item value="C:\Users\pablo\eclipse-workspace\cambioMano"/>
+			<item value="C:\Users\pablo\eclipse-workspace\CambioDeMano"/>
+			<item value="C:\Users\pablo\eclipse-workspace\CambioDeMano\CambioDeMano"/>
+			<item value="C:\Users\pablo\Downloads\38619312GarciaVelez38703964Vivas\38619312GarciaVelez38703964Vivas"/>
+			<item value="C:\Users\pablo\eclipse-workspace\2021-template-evaluacion-master (1)\2021-template-evaluacion-master"/>
+			<item value="C:\Users\pablo\OneDrive\Escritorio\PrograAvanzada1C2021\Juego-dinosaurio-de-google"/>
+			<item value="C:\Users\pablo\OneDrive\Escritorio\PrograAvanzada1C2021\TheExceptions"/>
+			<item value="C:\Users\pablo\Downloads\ArmandoMoviles\ArmandoMoviles"/>
+			<item value="C:\Users\pablo\eclipse-workspace\Loom"/>
+			<item value="C:\Users\pablo\eclipse-workspace\Acortando\2021-template-evaluacion-master"/>
+			<item value="C:\Users\pablo\eclipse-workspace\Acortando"/>
+			<item value="C:\Users\pablo\eclipse-workspace\ACortandoElCamino\acortando"/>
+			<item value="C:\Users\pablo\eclipse-workspace\ACortandoElCamino"/>
+			<item value="C:\Users\pablo\eclipse-workspace\AcortandoElCamino\AcortandoElCamino"/>
+			<item value="C:\Users\pablo\eclipse-workspace\AcortandoElCamino"/>
+			<item value="C:\Users\pablo\eclipse-workspace\CaosEnLaEnvasadoraDeLatas"/>
+			<item value="C:\Users\pablo\eclipse-workspace\aCorrerQueEsMuySaludable"/>
+			<item value="C:\Users\pablo\OneDrive\Escritorio\Velez-Vivas\Parcial\2021-template-evaluacion-master"/>
+			<item value="C:\Users\pablo\OneDrive\Escritorio\Velez-Vivas\Parcial"/>
+			<item value="C:\Users\pablo\OneDrive\Escritorio\Velez-Vivas"/>
+			<item value="C:\Users\pablo\Downloads\multiplayer-snake-student"/>
+			<item value="C:\Users\pablo\eclipse-workspace\ConexionesDeRed\2021-template-evaluacion-master"/>
+			<item value="C:\Users\pablo\eclipse-workspace\ConexionesDeRed"/>
+			<item value="C:\Users\pablo\OneDrive\Escritorio\PrograAvanzada1C2021\Taller\KingDomino"/>
+			<item value="C:\Users\pablo\OneDrive\Escritorio\King\KingDomino"/>
+			<item value="C:\Users\pablo\OneDrive\Escritorio\GarciaVelezVivas\2021-template-evaluacion-master"/>
+			<item value="C:\Users\pablo\eclipse-workspace\DescubriendoNombresRepetidosV2\DescubriendoNombresRepetidosV2"/>
+			<item value="C:\Users\pablo\eclipse-workspace\MesadasGranitoV2"/>
+			<item value="C:\Users\pablo\eclipse-workspace\DescubriendoNombresRepetidosV2"/>
+			<item value="C:\Users\pablo\Downloads\2021-ejemplo-evaluacion-master\2021-ejemplo-evaluacion-master"/>
+			<item value="C:\Users\pablo\Downloads\2021-template-evaluacion-master\2021-template-evaluacion-master"/>
+			<item value="C:\Users\pablo\OneDrive\Documentos\KingDomino\KingDomino"/>
+			<item value="C:\Users\pablo\OneDrive\Escritorio\PrograAvanzada1C2021\Juego\KingDomino"/>
+			<item value="C:\Users\pablo\OneDrive\Escritorio\PrograAvanzada1C2021\eclipse-workspace\OIA"/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.jdt.ui.java"/>
+		</list>
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\pablo\eclipse-workspace\InstalandoAplicacionesTemplate"/>
+			<item value="C:\Users\pablo\eclipse-workspace\cambioMano"/>
+			<item value="C:\Users\pablo\eclipse-workspace\multiplayer-snake-student"/>
+			<item value="C:\Users\pablo\eclipse-workspace\TheExceptions"/>
+			<item value="C:\Users\pablo\eclipse-workspace\tempDescubriendoNombres"/>
+			<item value="C:\Users\pablo\eclipse-workspace\templateMesaGranito"/>
+			<item value="C:\Users\pablo\eclipse-workspace\MesadasGranitoV2"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+</section>

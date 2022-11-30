@@ -1,0 +1,27 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class GestorFile {
+	
+	public static Imagen leerArchivo(String path) {
+		try {
+			Scanner sc=new Scanner(new File(path));
+			String image_comprimida=sc.nextLine();
+			String image_descomprimida=sc.nextLine();
+			
+			sc.close();
+			
+			return new Imagen(image_comprimida,image_descomprimida);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+		
+		
+	}
+	public static void main(String[] args) {
+		
+	}
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="AventurerosMaterosTemplate/src"/>
+	<classpathentry kind="src" path="AventurerosMaterosTemplate/tests"/>
+	<classpathentry kind="src" path="InstalandoAps/src"/>
+	<classpathentry kind="lib" path="AventurerosMaterosTemplate/lib/hamcrest-2.2.jar"/>
+	<classpathentry kind="lib" path="AventurerosMaterosTemplate/lib/junit-addons-1.4.jar"/>
+	<classpathentry kind="output" path="AventurerosMaterosTemplate/bin"/>
+</classpath>

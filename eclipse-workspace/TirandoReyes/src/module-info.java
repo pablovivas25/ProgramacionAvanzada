@@ -1,0 +1,3 @@
+module TirandoReyes {
+	exports clases;
+}

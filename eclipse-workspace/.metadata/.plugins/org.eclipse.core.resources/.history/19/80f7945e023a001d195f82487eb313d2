@@ -1,0 +1,6 @@
+
+public class Resolucion {
+	public static void main(String[] args) {
+		Almacenamiento almacenamiento=GestorFile.leer("")
+	}
+}

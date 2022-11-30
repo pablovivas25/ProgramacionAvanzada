@@ -1,0 +1,40 @@
+
+public class Limitrofe implements Comparable<Limitrofe> {
+	private String p1;
+	private String p2;
+
+	public Limitrofe(String p1, String p2) {
+		super();
+		this.p1 = p1;
+		this.p2 = p2;
+	}
+
+	
+
+	public String getP1() {
+		return p1;
+	}
+
+	public String getP2() {
+		return p2;
+	}
+
+
+
+
+
+	@Override
+	public int compareTo(Limitrofe o) {
+		if(this.p1.equals(o.p1))
+			return this.p2.compareTo(o.p2);
+		return this.p1.compareTo(o.p1);
+	}
+
+
+
+	
+
+
+
+
+}

@@ -1,0 +1,52 @@
+package clases;
+
+public class Lolo extends Entidad{
+	private boolean vivo;
+
+	
+   public Lolo(Ubicacion ubicacion, boolean des, boolean tras) {
+		super(ubicacion, des, tras);
+		this.vivo = true;
+	}
+
+	public boolean isVivo() {
+		return vivo;
+	}
+
+	public void setVivo(boolean vivo) {
+		this.vivo = vivo;
+	}
+
+	@Override
+	public String toString() {
+		return super.toString()+"Lolo [vivo=" + vivo + "]";
+	}
+	
+	
+	
+	public void moverArriba(Mapa m) {
+		
+     	Entidad arriba=m.getArriba(this);
+     	
+		
+		if(arriba==null || arriba.)
+			return  this.ubicacion.setPosX(this.ubicacion.getPosX()-1);
+		
+	
+	
+    }
+
+    public void moverAbajo(Mapa m) {
+       
+    }
+    public void moverDerecha(Mapa m) {
+       
+    }
+
+    public void moverIzquierda(Mapa m) {
+ 
+    }
+	
+	
+
+}

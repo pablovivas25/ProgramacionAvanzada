@@ -1,0 +1,47 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class GestorArchivo implements Archivo{
+	
+	@Override
+	public Torneo leerArchivo(String path_archivo) {
+		
+		File file = new File(path_archivo);
+		Scanner scanner;
+		try {
+			scanner = new Scanner(file);
+			scanner.useLocale(Locale.ENGLISH);
+
+			int cant = scanner.nextInt();
+			Torneo t=new Torneo(cant);
+		
+			for (int i = 0; i < cant; i++) {
+				Luchador l=new Luchador(scanner.nextInt(),scanner.nextInt());
+				System.out.println(l.getAltura() + " "+l.getPeso());
+				t.agregarParticipante(l);
+			}
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		return t;
+	}
+
+	@Override
+	public void escribirArchivo(String path_archivo, int[] resultado) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public static void main(String[] args) {
+		GestorArchivo g=new GestorArchivo();
+		Torneo t=g.leerArchivo("LotePrueba/Entrada/01_enunciado.in");
+		
+		System.out.println(t.getCantidad_participantes());
+	}
+	
+	
+
+}

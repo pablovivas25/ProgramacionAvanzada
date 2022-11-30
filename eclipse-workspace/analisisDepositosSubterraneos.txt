@@ -1,0 +1,21 @@
+3(cant Depositos)
+12 3 (deposito 1) 36
+8 2 (deposito 2)  16
+----------------- 52
+6 1 (deposito 3)  6
+----------------  58
+
+60 (volumen a ingresar)
+
+Salida:
+Rebasan: 2
+
+in 2
+3
+12 3 36
+8  2 16
+6  1 6
+30
+
+salida:
+1

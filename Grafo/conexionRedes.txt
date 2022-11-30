@@ -1,0 +1,14 @@
+p 17 25  ¿ esta conectado 17 25? No
+c 17 25   Conecto 17 25 
+p 17 25  ¿esta conectado 17 25? Si 
+c 1  25  Conecto 1 25   --> Tengo conectado 1 25 17
+p 1 17   ¿esta conectado 1 17? Si (busco el camino)
+p 3 17  ¿esta conectado 3 17? No
+f
+
+Salida:
+N
+S
+S
+N
+

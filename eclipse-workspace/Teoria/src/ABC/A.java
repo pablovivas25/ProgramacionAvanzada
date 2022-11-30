@@ -1,0 +1,3 @@
+package ABC;
+
+class A {}

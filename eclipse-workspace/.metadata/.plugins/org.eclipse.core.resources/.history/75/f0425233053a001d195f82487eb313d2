@@ -1,0 +1,60 @@
+
+public class Almacenamiento {
+	
+	private int cantidadAplicaciones;
+	private Aplicacion appInstalar;
+	private Celular celu;
+	private int cantidadAplicacionesABorrar;
+	
+	
+	public Almacenamiento(int cantidadAplicaciones, Aplicacion appInstalar, Celular celu) {
+		super();
+		this.cantidadAplicaciones = cantidadAplicaciones;
+		this.appInstalar = appInstalar;
+		this.celu = celu;
+		this.cantidadAplicacionesABorrar=-1;
+	}
+	
+	public void setCantidadAplicacionesABorrar(int cantidadAplicacionesABorrar) {
+		this.cantidadAplicacionesABorrar = cantidadAplicacionesABorrar;
+	}
+
+	public int getCantidadAplicaciones() {
+		return cantidadAplicaciones;
+	}
+	
+	public int sumarMemoriaTotalCelular() {
+		int suma=0;
+		
+		for(int i=0;i<this.celu.getAplicaciones().size();i++)
+			suma+=this.celu.getAplicaciones().get(i).getMemoria();
+		
+		return suma;
+	}
+	public void resolver() {
+		
+	  int memoriaTotal=this.sumarMemoriaTotalCelular();
+	  
+	  if(memoriaTotal<this.appInstalar.getMemoria())
+		this.setCantidadAplicacionesABorrar(0);
+	  
+	  //segundo caso cubierto
+	  
+	   
+	  
+	}
+
+
+	public Aplicacion getAppInstalar() {
+		return appInstalar;
+	}
+
+
+	public Celular getCelu() {
+		return celu;
+	}
+	
+	
+	
+
+}

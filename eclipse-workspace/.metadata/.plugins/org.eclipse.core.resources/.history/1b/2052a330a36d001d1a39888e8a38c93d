@@ -1,0 +1,32 @@
+import java.util.List;
+
+public class Envasadora {
+	private List<Secuencia> listaSec;
+	private int cadena_longitud;
+
+	public Envasadora(List<Secuencia> listaSec, int cadena_longitud) {
+		super();
+		this.listaSec = listaSec;
+		this.cadena_longitud=cadena_longitud;
+	}
+
+	public List<Secuencia> getListaSec() {
+		return listaSec;
+	}
+
+	public void setListaSec(List<Secuencia> listaSec) {
+		this.listaSec = listaSec;
+	}
+	
+	public void resolver() {
+		
+	}
+
+	public int getCadena_longitud() {
+		return cadena_longitud;
+	}
+	
+	
+	
+	
+}

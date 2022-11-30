@@ -1,0 +1,84 @@
+package conflictoentrereinas;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Tablero {
+	private int fil;
+	private int col;
+	private int cantidadReinas;
+	private List<Reina> reinas;
+	
+	
+	public Tablero(int fil, int col,int cantRei, List<Reina> reinas) {
+		super();
+		this.fil = fil;
+		this.col = col;
+		this.cantidadReinas=cantRei;
+		this.reinas = reinas;
+	}
+	public List<Integer> conflictos(Reina r){
+		List<Integer>conflic= new ArrayList<Integer>(this.cantidadReinas);
+		
+		for(Reina reina:this.reinas) {
+			if(reina.getNumeroReina()!=r.getNumeroReina()) {
+				int conflicto=reina.hayConflicto(r);
+				
+				if(conflicto>=1 && conflicto<=8)
+					conflic.add(r.getNumeroReina());
+			}
+		}
+		return conflic;
+		
+	}
+	public boolean tieneDiagDerAbajo(Reina r) {
+		return r.getPosX()==this.fil && r.getPosY()==this.col ? true: false;
+	}
+	
+	public boolean tieneDiagIzqAbajo(Reina r) {
+		return r.getPosX()<this.fil && r.getPosY()<this.col?true:false;
+	}
+	public boolean tieneDiagDerArriba(Reina r) {
+		return r.getPosX() > 1 && r.getPosY()<this.col?true:false;
+	}
+	
+//	public boolean tieneDiagIzqArriba(Reina r) {
+//		return r.getPosX()
+//	}
+	public List<Integer> conflictoDiagonales(Reina r){
+		List<Integer> cd=new ArrayList<Integer>(this.cantidadReinas);
+		
+		
+		return cd;
+	}
+	public void resolver(String path) throws FileNotFoundException {
+		PrintWriter pw = new PrintWriter(new File(path));
+		List<Integer> r=new ArrayList<Integer>(this.cantidadReinas);
+		
+		for(Reina rn:this.reinas) {
+			r=conflictos(rn);
+			if(r.size()==0) {
+				pw.println(0);
+			}else {
+				pw.print(r.size() + " ");
+				for(Integer aux:r) {
+					pw.print(aux+ " ");
+				}
+				pw.print("\n");
+			}
+		}
+		
+		pw.close();
+	}
+	public static void main(String[] args) throws FileNotFoundException {
+		Archivo a=new Archivo();
+		//Tablero t=a.leerArchivo("EntradaReina/enun01.in");
+		Tablero t=a.leerArchivo("EntradaReina/enun02.in");
+		//t.resolver("SalidaReina/enun01.out");
+		t.resolver("SalidaReina/enun02.out");
+	}
+	
+}

@@ -1,0 +1,11 @@
+package paquete;
+
+public class Feline {
+	public String type = "f "; //si es protected funca igual
+	private String type2= "A";
+
+	public Feline() {
+		System.out.print("feline ");
+	}
+	
+}

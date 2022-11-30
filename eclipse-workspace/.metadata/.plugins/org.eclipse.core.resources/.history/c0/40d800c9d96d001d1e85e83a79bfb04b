@@ -1,0 +1,9 @@
+
+public class Sopa {
+	private List<String> norte;
+	private List<String> oeste;
+	private List<String> este;
+	private List<String> sur;
+	
+	private List<String> palabras_abuscar;
+}

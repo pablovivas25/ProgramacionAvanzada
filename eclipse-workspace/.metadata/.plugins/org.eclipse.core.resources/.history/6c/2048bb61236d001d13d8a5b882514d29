@@ -1,0 +1,60 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class GestorFile {
+	
+	public static Carrera leerArchivo(String path) {
+		try {
+			Scanner sc=new Scanner(new File(path));
+			List<Rango> rango_masculino=new ArrayList<Rango>();
+			List<Rango> rango_femenino=new ArrayList<Rango>();
+			List<Competidor> competidores=new ArrayList<Competidor>();
+			List<Integer> orden=new ArrayList<Integer>();
+			
+			int comp=sc.nextInt();
+			int cant_rango_feminino=sc.nextInt();
+			int cant_rango_masculino=sc.nextInt();
+			int competidores_meta=sc.nextInt();
+			
+			for(int i=0;i<cant_rango_feminino;i++)
+				rango_femenino.add(new Rango(sc.nextInt(),sc.nextInt()));
+			
+			for(int i=0;i<cant_rango_masculino;i++)
+				rango_masculino.add(new Rango(sc.nextInt(),sc.nextInt()));
+			
+			for(int i=0;i<comp;i++)
+				competidores.add(new Competidor(sc.nextInt(),sc.next(),i+1));
+			for(int i=0;i<competidores_meta;i++)
+				orden.add(sc.nextInt());
+			
+			
+				
+			
+			sc.close();
+			return new Carrera(rango_femenino,rango_masculino,competidores,orden);
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+		
+	}
+	public static void main(String[] args) {
+		Carrera c=GestorFile.leerArchivo("./PreparacionPruebas/LotePrueba/Entrada/enunciado.in");
+		
+		
+		
+		c.resolver();
+		
+		for(Rango r:c.getRango_femenino()) {
+			for(Integer i:r.getPodio())
+				System.out.println(i);
+		}
+			
+		
+	}
+
+}

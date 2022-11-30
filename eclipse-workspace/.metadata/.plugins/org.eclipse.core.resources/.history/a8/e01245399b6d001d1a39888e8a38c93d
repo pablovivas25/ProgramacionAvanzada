@@ -1,0 +1,8 @@
+
+public class Secuencia {
+	private String sec;
+	private int posicion_inicial;
+	private int posicion_final;
+	
+	
+}

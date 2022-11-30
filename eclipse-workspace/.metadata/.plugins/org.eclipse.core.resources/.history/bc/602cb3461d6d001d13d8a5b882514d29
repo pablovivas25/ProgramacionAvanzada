@@ -1,0 +1,17 @@
+import java.util.List;
+
+public class Carrera {
+	private List<Rango> listaRangos;
+	private List<Competidor> competidores;
+	private List<Integer> orden_llegada;
+	
+	public Carrera(List<Rango> listaRangos, List<Competidor> competidores, List<Integer> orden_llegada) {
+		super();
+		this.listaRangos = listaRangos;
+		this.competidores = competidores;
+		this.orden_llegada = orden_llegada;
+	}
+	
+	
+	
+}

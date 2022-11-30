@@ -1,0 +1,6 @@
+
+public class Rango {
+	private int edadMinima;
+	private int edadMaxima;
+	private List<Integer> podio;
+}

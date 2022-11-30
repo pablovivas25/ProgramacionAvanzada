@@ -1,0 +1,116 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.PriorityQueue;
+
+public class Kruscal {
+	private ArrayList<Nodo> ListNmst = new ArrayList<Nodo>();
+	private boolean[] Nmst;
+	private int CostoArbol = 0;
+	private int CardinalidadNmst;
+	private int padre[];
+	private PriorityQueue<Arista> pq = new PriorityQueue<Arista>();
+	private List<List<Nodo>> nm = new ArrayList<>();
+	private Grafo gr;
+	private ArrayList<Arista> mst=new ArrayList<Arista>();
+	
+	public Kruscal(String s) {
+		
+		int costoMinimo=0;
+
+		this.gr = new Grafo(s);
+		for (Arista a : gr.getListaArista()) {
+
+			pq.add(a);
+		}
+		for (int p = 0; p < this.gr.getCantNodos(); p++) {
+
+			this.nm.add(p, new ArrayList<Nodo>());
+			this.nm.get(p).add(new Nodo(p));
+		}
+		this.Nmst = new boolean[gr.getCantNodos()];
+		this.padre = new int[gr.getCantNodos()];
+
+		this.asignarPadre();// queda el vector cargado con todos los padres
+		
+		
+	
+		while (this.mst.size()!=6) {
+			Arista salidaCola = pq.poll();
+
+			int padreNodo1=this.find(salidaCola.getNodoInicial().getNumero()-1);
+			int padreNodo2=this.find(salidaCola.getNodoFinal().getNumero()-1);
+			
+			if(padreNodo1!=padreNodo2) {
+				this.union(padreNodo1, padreNodo2);
+				this.mst.add(salidaCola);
+				costoMinimo+=salidaCola.getPeso();
+			}
+				
+		}
+	//	System.out.println(costoMinimo);
+	}
+	
+
+
+	public void asignarPadre() {
+		for (int i = 0; i < this.gr.getCantNodos(); i++) {
+			this.padre[i] = i;
+		}
+	}
+
+
+	public int find(int p) {
+
+		while (p != this.padre[p]) {
+			this.padre[p] = this.padre[this.padre[p]]; // path compression by halving
+			p = this.padre[p];
+		}
+		return p;
+	}
+
+	public boolean conectado(int p, int q) {
+		return find(p) == find(q);
+	}
+
+	public void union(int p, int q) {
+		  this.padre[find(p)] = find(q);
+	}
+	
+	
+	public int[] getPadre() {
+		return padre;
+	}
+
+
+
+	public void setPadre(int[] padre) {
+		this.padre = padre;
+	}
+
+
+
+	public ArrayList<Arista> getMst() {
+		return mst;
+	}
+
+
+
+	public void setMst(ArrayList<Arista> mst) {
+		this.mst = mst;
+	}
+
+
+
+	public static void main(String[] args) {
+		Kruscal k=new Kruscal("./Entrada/enunciado.in");
+		
+		for(Integer padre:k.getPadre())
+			System.out.print(padre+ " ");
+		
+		for(Arista a:k.getMst()) {
+			System.out.println(a.getNodoInicial().getNumero()+ " "+a.getNodoFinal().getNumero()+ " "+a.getPeso());
+		}
+			
+	}
+}

@@ -1,0 +1,10 @@
+import java.util.List;
+
+public class Carrera {
+	private List<Rango> rango_femenino;
+	private List<Rango> rango_masculino;
+	private List<Competidor> competidores;
+	private List<Integer> orden_llegada;
+	
+	
+}

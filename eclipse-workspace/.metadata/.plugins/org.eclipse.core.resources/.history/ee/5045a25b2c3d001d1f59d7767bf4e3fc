@@ -1,0 +1,9 @@
+package clases;
+
+public class Corazon extends Obstaculo {
+	
+	public Corazon(Ubicacion ubicacion, boolean des, boolean tras) {
+		super(ubicacion, des, tras);
+		this.descripcion=desc;
+	}
+}
